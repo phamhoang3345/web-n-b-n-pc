@@ -1,0 +1,354 @@
+/*header*/
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #ededed;
+}
+
+.header {
+    background-color: #1480ec; /* Màu xanh công nghệ */
+    padding: 10px 0;
+    color: rgb(253, 253, 253);
+    position: sticky;
+    top: 0;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    background: white;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.search-box input {
+    border: none;
+    padding: 8px 10px;
+    width: 250px;
+    outline: none;
+}
+
+.search-box button {
+    background-color: #1480ec;
+    border: none;
+    color: white;
+    padding: 8px 15px;
+    cursor: pointer;
+}
+
+.user-icons img {
+    width: 25px;
+    margin-left: 15px;
+    filter: brightness(0) invert(1);
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.user-icons img:hover {
+    transform: scale(1.1);
+}
+
+/* chi tiết sản phẩm */
+main {
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.product-detail {
+display: flex;
+gap: 32px;
+padding: 40px 0;
+}
+
+
+.detail-img img {
+width: 420px;
+border-radius: 12px;
+}
+
+.detail-info {
+flex: 1;
+}
+
+.specs {
+list-style: none;
+padding: 0;
+margin: 16px 0;
+}
+
+.specs li {
+margin-bottom: 8px;
+color: var(--muted);
+}
+
+.specs strong {
+color: #fff;
+}
+
+.btn {
+    width: 15%;
+    height: 10%;
+}
+
+.price .amount {
+  font-size: 24px;       /* chữ số tiền to hơn */
+  font-weight: bold;     /* làm đậm */
+  color: #e53935;        /* màu đỏ nổi bật */
+  margin-left: 5px;      /* tạo khoảng cách với "Giá:" */
+}
+
+/* Thông số kĩ thuật */
+:root{
+    --border-color:#333;
+    --header-bg: #f7f7f7;
+    --title-color:#222;
+    --font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+.spec-card{
+    max-width:1100px;
+    margin: 0 auto;
+    border: 1px solid var(--border-color);
+    padding: 18px;
+    box-sizing: border-box;
+    }
+
+.spec-title{
+    font-weight:700;
+    color: var(--title-color);
+    margin: 0 0 10px 0;
+    font-size:18px;
+    letter-spacing: 0.4px;
+}
+
+.table-wrap{
+    
+}
+
+table.spec-table{
+    width:100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+    font-size:13px;
+}
+
+table.spec-table, table.spec-table th, table.spec-table td {
+    
+}
+
+table.spec-table thead th{
+    background: var(--header-bg);
+    font-weight:700;
+    padding:8px 10px;
+    text-align:center;
+    vertical-align:middle;
+    border-bottom-width:2px;
+}
+
+th.col-stt{ width:6%; min-width:48px; }
+th.col-desc{ width:78%; }
+th.col-sl{ width:8%; min-width:50px; }
+th.col-bh{ width:8%; min-width:60px; }
+
+table.spec-table tbody td{
+    padding:10px 12px;
+    vertical-align: middle;
+}
+
+td.center{
+    text-align:center;
+}
+
+td.desc{
+    text-align:left;
+    word-wrap:break-word;
+    line-height:1.25;
+    white-space:normal;
+}
+
+.part-name{
+    display:block;
+    font-weight:700;
+}
+
+.spec-card .top-border{
+    border-bottom: 4px solid var(--border-color);
+    padding-bottom: 10px;
+    margin-bottom: 8px;
+}
+
+.note{
+    margin-top:8px;
+    font-size:12px;
+    color:#444;
+}
+
+@media print{
+    body{ background:#fff; }
+    .spec-card{ box-shadow: none; border:none; }
+}
+
+/* sản phẩm liên quan */
+.content {
+    flex: 1;
+    padding: 0 20px;
+    margin: 10px;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between; /* đẩy h2 sang trái, nút sang phải */
+    align-items: center;            /* canh giữa theo chiều dọc */
+    margin-bottom: 16px;
+}
+
+.section-header .btn {
+    font-size: 14px;
+    padding: 8px 14px;
+    color: #050505;
+}
+
+.section-header h2 {
+    font-size: 32px;
+    margin: 0;
+    color: #fcfcfc;
+}
+
+.product-section {
+    background: #fff;
+    margin-bottom: 20px;
+    border: 1px solid #eceaea;
+}
+
+.product-section .next {
+    align-items: center;
+}
+
+.product-section h2 {
+    background: #fff;
+    color: rgb(3, 3, 3);
+    padding: 10px;
+}
+.products {
+    display: flex;
+    justify-content: space-around;
+    padding: 15px;
+    background-color: #fff;
+
+}
+.product {
+    width: 30%;
+    text-align: center;
+    background: white;
+    border: 1px solid white;
+    padding: 10px;
+    margin: 10px;
+    color :#333
+
+}
+.product img {
+    width: 50%;
+    height: 150px;
+    object-fit: cover;
+}
+.product h4 {
+    margin: 10px 0;
+}
+.price {
+    color: red;
+    font-weight: bold;
+    
+}
+
+a {
+    text-decoration: none;
+    color: rgb(8, 8, 8);
+}
+
+/* Footer */
+.footer {
+    background-color: #fff;
+    color: #030303;
+    padding: 50px 0 20px;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: auto;
+    gap: 30px;
+}
+
+.footer-column {
+    flex: 1 1 220px;
+    min-width: 200px;
+}
+
+.footer-column h3 {
+    color: #0c0c0c;
+    margin-bottom: 15px;
+    font-size: 18px;
+    border-left: 4px solid #1480ec;
+    padding-left: 10px;
+}
+
+.footer-column p {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 8px;
+}
+
+.footer-column ul li a {
+    color: #000000;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.footer-column ul li a:hover {
+    color: #1480ec;
+}
+
+.social-icons a img {
+    width: 24px;
+    margin-right: 10px;
+    transition: transform 0.3s;
+}
+
+.social-icons a:hover img {
+    transform: scale(1.1);
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    border-top: 1px solid #fff;
+    padding-top: 15px;
+    font-size: 14px;
+    color: #080808;
+}

@@ -1,0 +1,228 @@
+/*header*/
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #ededed;
+}
+
+.header {
+    background-color: #1480ec; /* Màu xanh công nghệ */
+    padding: 10px 0;
+    color: rgb(253, 253, 253);
+    position: sticky;
+    top: 0;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    background: white;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.search-box input {
+    border: none;
+    padding: 8px 10px;
+    width: 250px;
+    outline: none;
+}
+
+.search-box button {
+    background-color: #1480ec;
+    border: none;
+    color: white;
+    padding: 8px 15px;
+    cursor: pointer;
+}
+
+.user-icons a {
+    color: #eceaea;
+    text-decoration: none;
+}
+
+.user-icons img {
+    width: 25px;
+    margin-left: 15px;
+    filter: brightness(0) invert(1);
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.user-icons img:hover {
+    transform: scale(1.1);
+}
+
+/* main */
+main {
+    display: flex;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+/* sản phẩm */
+.content {
+    flex: 1;
+    padding: 0 20px;
+    margin: 10px;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between; /* đẩy h2 sang trái, nút sang phải */
+    align-items: center;            /* canh giữa theo chiều dọc */
+    margin-bottom: 16px;
+}
+
+.section-header .btn {
+    font-size: 14px;
+    padding: 8px 14px;
+    color: #f3f3f3;
+}
+
+.section-header h2 {
+    font-size: 32px;
+    margin: 0;
+    color: #0c0b0b;
+}
+
+.product-section {
+    background: #fff;
+    margin-bottom: 20px;
+    border: 1px solid #eceaea;
+}
+
+.product-section .next {
+    align-items: center;
+}
+
+.product-section h2 {
+    background: #1480ec;
+    color: white;
+    padding: 10px;
+}
+.products {
+    display: flex;
+    justify-content: space-around;
+    padding: 15px;
+    background-color: #fff;
+
+}
+.product {
+    width: 30%;
+    text-align: center;
+    background: white;
+    border: 1px solid white;
+    padding: 10px;
+    margin: 10px;
+    color :#272222
+}
+.product img {
+    width: 50%;
+    height: 150px;
+    object-fit: cover;
+}
+.product h4 {
+    margin: 10px 0;
+}
+.price {
+    color: red;
+    font-weight: bold;
+    
+}
+
+.product-section a {
+    text-decoration: none;
+    color: rgb(12, 11, 11);
+}
+
+
+
+
+/* Footer */
+.footer {
+    background-color: #ffffff;
+    color: #050505;
+    padding: 50px 0 20px;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: auto;
+    gap: 30px;
+}
+
+.footer-column {
+    flex: 1 1 220px;
+    min-width: 200px;
+}
+
+.footer-column h3 {
+    color: #050505;
+    margin-bottom: 15px;
+    font-size: 18px;
+    border-left: 4px solid #00bfff;
+    padding-left: 10px;
+}
+
+.footer-column p {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 8px;
+}
+
+.footer-column ul li a {
+    color: #050505;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.footer-column ul li a:hover {
+    color: #00bfff;
+}
+
+.social-icons a img {
+    width: 24px;
+    margin-right: 10px;
+    transition: transform 0.3s;
+}
+
+.social-icons a:hover img {
+    transform: scale(1.1);
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    border-top: 1px solid #f7f7f7;
+    padding-top: 15px;
+    font-size: 14px;
+    color: #050505;
+}
