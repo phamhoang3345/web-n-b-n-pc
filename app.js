@@ -155,4 +155,7 @@ tableBody.innerHTML = product.table.map(row => `
         <td class="center">${row[3]}</td>
     </tr>
 `).join("");
+
+
+
 });

@@ -92,7 +92,8 @@ main {
 .section-header .btn {
     font-size: 14px;
     padding: 8px 14px;
-    color: #f3f3f3;
+    color: #000 !important;
+    text-decoration: none;
 }
 
 .section-header h2 {
@@ -132,6 +133,12 @@ main {
     margin: 10px;
     color :#272222
 }
+
+.product a {
+    color :#000;
+    text-decoration: none;
+}
+
 .product img {
     width: 50%;
     height: 150px;
@@ -144,11 +151,6 @@ main {
     color: red;
     font-weight: bold;
     
-}
-
-.product-section a {
-    text-decoration: none;
-    color: rgb(12, 11, 11);
 }
 
 

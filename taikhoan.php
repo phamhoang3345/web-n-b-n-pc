@@ -1,9 +1,22 @@
 <?php
 session_start();
+include "connect.php";
+
 if (!isset($_SESSION['username'])) {
     header("Location: dangnhap.php");
     exit;
 }
+
+$username = $_SESSION['username'];
+
+
+
+
+// Lấy thông tin từ database
+$sql = "SELECT * FROM users WHERE username = '$username'";
+$result = $conn->query($sql);
+$user = $result->fetch_assoc();
+
 ?>
 
 <!DOCTYPE html>
@@ -29,15 +42,11 @@ if (!isset($_SESSION['username'])) {
     </div>
 
     <!-- Menu -->
-    <nav class="nav-menu">
-        <button class="menu-btn" id="menu-btn">☰ Danh sách sản phẩm</button>        
-    </nav>
 
     <!-- Giỏ hàng và đăng nhập -->
     <div class="user-icons"></div>
 
 <h2>Xin chào, <?php echo $_SESSION['username']; ?>!</h2>
-<a href="dangxuat.php">Đăng xuất</a>
 </div>
 </header>
 
@@ -47,24 +56,23 @@ if (!isset($_SESSION['username'])) {
     <!-- Phần avatar và info ngắn -->
     <div class="profile">
         <img src="avatar.png" alt="Avatar">
-        <h2>Nguyễn Văn A</h2>
-        <p>user@example.com</p>
-        <button>Đăng xuất</button>
+        <h2> <?php echo $_SESSION['username']; ?> </h2>
+        <a href="dangxuat.php"><button>Đăng xuất</button></a>
     </div>
 
     <!-- Phần thông tin chi tiết -->
     <div class="account-info">
         <h3>Thông tin tài khoản</h3>
-        <label for="name">Họ và tên</label>
-        <input type="text" id="name" value="Nguyễn Văn A">
+        <label for="name">Username</label>
+        <input type="text" id="name" value= " <?php echo $user['username']; ?>" >
         
         <label for="email">Email</label>
-        <input type="email" id="email" value="user@example.com">
+        <input type="email" id="email" value="<?php echo $user['email']; ?>" >
         
         <label for="password">Mật khẩu</label>
-        <input type="password" id="password" value="********">
+        <input type="password" id="password" value="<?php echo $user['password']; ?>">
         
-        <button>Lưu thay đổi</button>
+        <button>Thay đổi thông tin</button>
     </div>
         <div class="orders">
             <h3>Đơn hàng gần đây</h3>
@@ -75,17 +83,6 @@ if (!isset($_SESSION['username'])) {
                     <th>Trạng thái</th>
                     <th>Tổng tiền</th>
                 </tr>
-                <tr>
-                    <td>#00123</td>
-                    <td>10/11/2025</td>
-                    <td>Đang xử lý</td>
-                    <td>15.000.000₫</td>
-                </tr>
-                <tr>
-                    <td>#00124</td>
-                    <td>12/11/2025</td>
-                    <td>Hoàn thành</td>
-                    <td>8.500.000₫</td>
                 </tr>
             </table>
         </div>

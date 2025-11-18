@@ -53,9 +53,6 @@ if (isset($_POST['login'])) {
     </div>
 
     <!-- Menu -->
-    <nav class="nav-menu">
-        <button class="menu-btn" id="menu-btn">☰ Danh sách sản phẩm</button>        
-    </nav>
 
     <!-- Giỏ hàng và đăng nhập -->
     <div class="user-icons">

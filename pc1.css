@@ -63,6 +63,11 @@ body {
     transform: scale(1.1);
 }
 
+.user-icons a {
+    color: #eceaea;
+    text-decoration: none;
+}
+
 /* chi tiết sản phẩm */
 main {
     margin-left: 50px;
@@ -100,11 +105,49 @@ color: var(--muted);
 color: #fff;
 }
 
-.btn {
-    width: 15%;
-    height: 10%;
+/* 2 nút đặt và thêm*/
+.btncardbuy {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
 }
 
+.btncardbuy button {
+    padding: 12px 25px;
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.25s ease;
+}
+
+/* Nút thêm vào giỏ */
+.add-cart {
+    background-color: #f0a500;
+    color: #fff;
+}
+
+.add-cart:hover {
+    background-color: #d98f00;
+    transform: translateY(-2px);
+}
+
+/* Nút đặt hàng */
+.buy-now {
+    background-color: #28a745;
+    color: white;
+}
+
+.buy-now:hover {
+    background-color: #1f8a39;
+    transform: translateY(-2px);
+}
+
+
+
+
+/* số tiền */
 .price .amount {
   font-size: 24px;       /* chữ số tiền to hơn */
   font-weight: bold;     /* làm đậm */
@@ -136,10 +179,6 @@ color: #fff;
     letter-spacing: 0.4px;
 }
 
-.table-wrap{
-    
-}
-
 table.spec-table{
     width:100%;
     border-collapse: collapse;
@@ -147,9 +186,6 @@ table.spec-table{
     font-size:13px;
 }
 
-table.spec-table, table.spec-table th, table.spec-table td {
-    
-}
 
 table.spec-table thead th{
     background: var(--header-bg);

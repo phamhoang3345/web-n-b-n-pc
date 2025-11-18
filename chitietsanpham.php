@@ -1,7 +1,6 @@
-<?php session_start(); ?>
-
-
-
+<?php session_start(); 
+$id = isset($_GET['id']) ? intval($_GET['id']) : 0;
+?>
 
 <!DOCTYPE html>
 <html lang="vi">
@@ -27,14 +26,21 @@
     </div>
 
     <!-- Menu -->
-    <nav class="nav-menu">
-        <button class="menu-btn" id="menu-btn">☰ Danh sách sản phẩm</button>        
-    </nav>
+
 
     <!-- Giỏ hàng và đăng nhập -->
     <div class="user-icons">
-        <a href="#"><img src="cart.png" alt="Giỏ hàng"></a>
-        <a href="#"><img src="user.png" alt="Tài khoản"></a>
+        <a href="giohang.php"><img src="./anh/gio hang.png">Giỏ hàng</a>
+
+
+        <?php if(isset($_SESSION['username'])): ?>
+        <a href="taikhoan.php"><img src="./anh/gio hang.png">Xin chào, <?php echo $_SESSION['username']; ?></a>
+
+        <?php else: ?>
+        <a href="dangnhap.php"><img src="./anh/gio hang.png">Tài khoản</a>
+        <?php endif; ?>
+
+
     </div>
     </div>
 </header>
@@ -54,8 +60,17 @@
       <ul id="product-specs" class="specs">
         <!-- JS sẽ chèn danh sách specs -->
       </ul>
-      <button class="btn">Thêm vào giỏ hàng</button>
-      <button class="btn">Đặt hàng</button>
+
+
+      <div class = "btncardbuy">
+      <form action="cart.php" method="POST"class="btn-form">
+        <input type="hidden" name="id" value="<?php echo (int)$id; ?>" >
+        <button type="submit" class="add-cart">Thêm giỏ hàng</button>
+      </form>
+
+      <button class="buy-now">Đặt hàng</button>
+      </div>
+      </div>
     </div>
   </div>
 
@@ -117,7 +132,7 @@
                         <p class="price">45,000,000 VND</p>
                     </div>
             </div>         
-        </div>
+    </div>
 </main>
 
 

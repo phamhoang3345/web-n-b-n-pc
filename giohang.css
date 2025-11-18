@@ -1,0 +1,80 @@
+/*header*/
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #ededed;
+}
+
+.header {
+    background-color: #1480ec; /* Màu xanh công nghệ */
+    padding: 10px 0;
+    color: rgb(253, 253, 253);
+    position: sticky;
+    top: 0;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    background: white;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.search-box input {
+    border: none;
+    padding: 8px 10px;
+    width: 250px;
+    outline: none;
+}
+
+.search-box button {
+    background-color: #1480ec;
+    border: none;
+    color: white;
+    padding: 8px 15px;
+    cursor: pointer;
+}
+
+.user-icons a {
+    color: #eceaea;
+    text-decoration: none;
+}
+
+.user-icons img {
+    width: 25px;
+    margin-left: 15px;
+    filter: brightness(0) invert(1);
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.user-icons img:hover {
+    transform: scale(1.1);
+}
+
+
+
+
+
+/* main */
+table { width: 80%; margin: auto; border-collapse: collapse; }
+table, th, td { border: 1px solid black; padding: 10px; }
+img { width: 120px; }
+.btn { padding: 6px 12px; background: red; color: #fff; border: none; cursor: pointer; }
+.checkout { padding: 10px 20px; background: #1480ec; color: white; border: none; cursor: pointer; }

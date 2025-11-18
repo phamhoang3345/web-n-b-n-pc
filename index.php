@@ -1,4 +1,6 @@
-<?php session_start(); ?>
+<?php session_start(); 
+$id = isset($_GET['id']) ? intval($_GET['id']) : 0;
+?>
 
 
 <!DOCTYPE html>
@@ -10,6 +12,8 @@
 <link rel="stylesheet" href="main.css">
 </head>
 <body>
+
+
 
 
 <!-- Header -->
@@ -27,21 +31,18 @@
     </div>
 
     <!-- Menu -->
-    <nav class="nav-menu">
-        <button class="menu-btn" id="menu-btn">☰ Danh sách sản phẩm</button>        
-    </nav>
+
 
     <!-- Giỏ hàng và đăng nhập -->
     <div class="user-icons">
 
 
 
-        <a href="#"><img src="./anh/gio hang.png">Giỏ hàng</a>
+        <a href="giohang.php"><img src="./anh/gio hang.png">Giỏ hàng</a>
 
 
         <?php if(isset($_SESSION['username'])): ?>
         <a href="taikhoan.php"><img src="./anh/gio hang.png">Xin chào, <?php echo $_SESSION['username']; ?></a>
-        <a href="dangxuat.php">Đăng xuất</a>
 
         <?php else: ?>
         <a href="dangnhap.php"><img src="./anh/gio hang.png">Tài khoản</a>
@@ -57,8 +58,6 @@
 
     <section class="content">
         <div class="product-section">
-            <button class="prev">&lt;</button>
-            <button class="next">&gt;</button>
 
             <div class = "section-header">
                 <h2>PC GAMING</h2> 
@@ -190,6 +189,10 @@
                 </div>
     </section>
 </main>
+
+
+
+
 
 <footer class="footer">
 <div class="footer-container">

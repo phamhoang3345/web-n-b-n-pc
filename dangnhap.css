@@ -110,7 +110,7 @@ body {
     .btn-login {
         width: 100%;
         padding: 10px;
-        background: #ff4b2b;
+        background: #1480ec;
         border: none;
         color: white;
         font-size: 16px;
@@ -121,7 +121,7 @@ body {
     }
 
     .btn-login:hover {
-        background: #ff3311;
+        background: #1480ec;
     }
 
     .signup-link {
@@ -130,14 +130,14 @@ body {
     }
 
     .signup-link a {
-        color: #ff4b2b;
+        color: #1480ec;
         text-decoration: none;
         font-weight: bold;
     }
 
     .error {
         margin-bottom: 15px;
-        color: red;
+        color: #1480ec;
         font-weight: bold;
     }
 
