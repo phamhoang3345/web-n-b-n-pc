@@ -1,5 +1,12 @@
 <?php session_start(); 
+include 'sanpham.php';
 $id = isset($_GET['id']) ? intval($_GET['id']) : 0;
+
+if ($id && isset($products[$id])) {
+    $product = $products[$id];
+}
+
+$product_name = $_POST["tensp"] ?? "";
 ?>
 
 <!DOCTYPE html>
@@ -21,8 +28,10 @@ $id = isset($_GET['id']) ? intval($_GET['id']) : 0;
 
     <!-- Thanh tìm kiếm -->
     <div class="search-box">
-        <input type="text" placeholder="Tìm kiếm sản phẩm..." />
-        <button>Tìm</button>
+        <form action="timkiem.php" method="GET" class="search-box">
+        <input type="text" name="keyword" placeholder="Tìm kiếm sản phẩm..." required>
+        <button type="submit">Tìm</button>
+        </form>
     </div>
 
     <!-- Menu -->
@@ -53,7 +62,7 @@ $id = isset($_GET['id']) ? intval($_GET['id']) : 0;
       <img id="product-img" src="" alt="Ảnh sản phẩm">
     </div>
     <div class="detail-info">
-      <h2 id="product-name"></h2>
+      <h2 id="product-name"><?php echo htmlspecialchars($product['name']); ?></h2>
       <p class="price">
         Giá : <span id="product-price" class="amount"></span>
       </p>
@@ -68,7 +77,13 @@ $id = isset($_GET['id']) ? intval($_GET['id']) : 0;
         <button type="submit" class="add-cart">Thêm giỏ hàng</button>
       </form>
 
-      <button class="buy-now">Đặt hàng</button>
+        <form action="dathang.php" method="post">
+            <input type="hidden" name="tensp" value=" <?php echo htmlspecialchars($product['name']); ?>  ">
+            <button type="submit" class="buy-now">Đặt hàng</button>
+        </form>
+
+
+      
       </div>
       </div>
     </div>

@@ -37,8 +37,10 @@ $user = $result->fetch_assoc();
 
     <!-- Thanh tìm kiếm -->
     <div class="search-box">
-        <input type="text" placeholder="Tìm kiếm sản phẩm..." />
-        <button>Tìm</button>
+        <form action="timkiem.php" method="GET" class="search-box">
+        <input type="text" name="keyword" placeholder="Tìm kiếm sản phẩm..." required>
+        <button type="submit">Tìm</button>
+        </form>
     </div>
 
     <!-- Menu -->

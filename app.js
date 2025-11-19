@@ -208,7 +208,7 @@ const products = {
     42 :{
     name: "PC WORKSTATION | Dual Xeon E5-2696 V3 | GTX 1660 Super",
     price: "17.680.000đ",
-    img: "./anh/GIALAP.jpg",
+    img: "./anh/GIALAP1.jpg",
     specs : [
 
     ],

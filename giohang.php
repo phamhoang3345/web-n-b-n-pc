@@ -33,8 +33,10 @@ if (!empty($cart)) {
 
     <!-- Thanh tìm kiếm -->
     <div class="search-box">
-        <input type="text" placeholder="Tìm kiếm sản phẩm..." />
-        <button>Tìm</button>
+        <form action="timkiem.php" method="GET" class="search-box">
+        <input type="text" name="keyword" placeholder="Tìm kiếm sản phẩm..." required>
+        <button type="submit">Tìm</button>
+        </form>
     </div>
 
     <!-- Menu -->
@@ -98,7 +100,9 @@ if (!empty($cart)) {
 </h3>
 
 <div style="text-align:center; margin-top:20px;">
-    <button class="checkout">Thanh toán</button>
+    <form action="dathang.php" method="post">
+        <button type="submit" class="buy-now">Đặt hàng</button>
+    </form>
 </div>
 
 <?php endif; ?>

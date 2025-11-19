@@ -63,31 +63,31 @@ $products = [
 
 
     41 => [
-        "name" => "PC WORKSTATION | Dual Xeon E5-2680 V4 | RTX 3060",
+        "name" => "PC GIẢ LẬP | Dual Xeon E5-2680 V4 | RTX 3060",
         "price" => 17680000,
         "img" => "./anh/GIALAP1.jpg",
     ],
 
     42 => [
-        "name" => "PC WORKSTATION | Dual Xeon E5-2696 V3 | GTX 1660 Super",
+        "name" => "PC GIẢ LẬP | Dual Xeon E5-2696 V3 | GTX 1660 Super",
         "price" => 17680000, 
         "img" => "./anh/GIALAP1.jpg",
     ],
 
     43 => [
-        "name" => "PC WORKSTATION | Dual Xeon E5-2680 V4 | GTX 1660 Super",
+        "name" => "PC GIẢ LẬP | Dual Xeon E5-2680 V4 | GTX 1660 Super",
         "price" => 13980000, 
         "img" => "./anh/GIALAP1.jpg",
     ],
 
     44 => [
-        "name" => "PC WORKSTATION | Dual Xeon E5-2696 V4 | RTX 3060",
+        "name" => "PC GIẢ LẬP | Dual Xeon E5-2696 V4 | RTX 3060",
         "price" => 28680000, 
         "img" => "./anh/GIALAP1.jpg",
     ],
 
     45 => [
-        "name" => "PC WORKSTATION | Dual Xeon E5-2696 V3 | RTX 3060",
+        "name" => "PC GIẢ LẬP | Dual Xeon E5-2696 V3 | RTX 3060",
         "price" => 20680000,
         "img" => "./anh/GIALAP1.jpg",
     ],
