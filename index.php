@@ -1,5 +1,5 @@
 <?php session_start(); 
-$id = isset($_GET['id']) ? intval($_GET['id']) : 0;
+
 ?>
 
 
@@ -67,10 +67,10 @@ $id = isset($_GET['id']) ? intval($_GET['id']) : 0;
 
                     
                     <div class="product">
-                        <a href="chitietsanpham.php?id=1">
+                        <a href="chitietsanpham.php?id= 1">
                         <img src = "./anh/PCGAMINGA.png" >
                         <h4>PC GAMING</h4>
-                        <P>RYZEN 9 9950X3D | RTX 5090 | 4K GAMING</P>
+                        <P>PC Gaming | RYZEN 9 9950X3D | RTX 5090 | 4K GAMING</P>
                         <p class="price">139.099.000 VND</p>
                         </a>
                     </div>
@@ -123,70 +123,97 @@ $id = isset($_GET['id']) ? intval($_GET['id']) : 0;
             </div>
                 <div class="products">
                     <div class="product">
+                        <a href="chitietsanpham.php?id=21">
                         <img src="./anh/WORK1.jpg" >
                         <h4>PC WORKSTATION</h4>
                         <P>ULTRA 7 265KF | RTX 4070 12GB OC</P>
                         <p class="price">37,980,000 VND</p>
+                        </a>
                     </div>
                     <div class="product">
+                        <a href="chitietsanpham.php?id=22">
                         <img src="./anh/WORK2.jpg" >
                         <h4>PC WORKSTATION</h4>
                         <P>i7 14700F | RTX 4060 8GB </P>
                         <p class="price">25,980,000 VND</p>
+                        </a>
                     </div>
                     <div class="product">
+                        <a href="chitietsanpham.php?id=23">
                         <img src="./anh/WORK3.jpg" >
                         <h4>PC WORKSTATION</h4>
                         <P>I9 14900KF | RTX 5070 12GB</P>
                         <p class="price">44,680,000 VND</p>
+                        </a>
                     </div>
                     <div class="product">
+                        <a href="chitietsanpham.php?id=24">
                         <img src="./anh/WORK2.jpg" >
                         <h4>PC WORKSTATION</h4>
                         <p>I5 14600KF | RTX 3060 12GB</p>
                         <p class="price">20,980,000 VND</p>
+                        </a>
                     </div>
                     <div class="product">
+                        <a href="chitietsanpham.php?id=25">
                         <img src="./anh/WORK3.jpg" >
                         <h4>PC WORKSTATION</h4>
                         <P>Ryzen 9 9900X | RTX 5090 32GB</P>
                         <p class="price">45,000,000 VND</p>
+                        </a>
                     </div>
             </div>         
         </div>
 
+
         <div class="product-section">
             <div class = "section-header">
-                <h2>LINH KIỆN MÁY TÍNH</h2> 
+                <h2>PC GIẢ LẬP</h2> 
                 <a href="#" class="btn">Xem tất cả +</a>
             </div>
                 <div class="products">
                     <div class="product">
-                        <img src="./anh/CPU1.jpg" >
-                        <P>CPU Intel Core Ultra 9 285K</P>
-                        <p class="price">16.190.000 VND</p>
+                        <a href="chitietsanpham.php?id=41">
+                        <img src="./anh/GIALAP1.jpg" >
+                        <h4>PC GIẢ LẬP</h4>
+                        <P>DUAL XEON E5-2680 V4 | RTX 3060 12GB</P>
+                        <p class="price">17.680.000 VND</p>
+                        </a>
                     </div>
                     <div class="product">
-                        <img src="./anh/RTX 5080.jpg" >
-                        <P>MSI GeForce RTX 5080 16G GAMING TRIO OC</P>
-                        <p class="price">41.590.000</p>
+                        <a href="chitietsanpham.php?id=42">
+                        <img src="./anh/GIALAP1.jpg" >
+                        <h4>PC GIẢ LẬP</h4>
+                        <P>DUAL Xeon E5-2696 V3 | GTX 1660 Super 6GB </P>
+                        <p class="price">17.680.000 VND</p>
+                        </a>
                     </div>
                     <div class="product">
-                        <img src="./anh/RAM1.jpg" >
-                        <P>RAM Kingston Fury Beast 16GB Bus 5200MHZ DDR5</P>
-                        <p class="price">2.590.000 VND</p>
+                        <a href="chitietsanpham.php?id=43">
+                        <img src="./anh/GIALAP1.jpg" >
+                        <h4>PC PC GIẢ LẬP</h4>
+                        <P>DUAL XEON E5-2680 V4 | GTX 1660 Super 6GB</P>
+                        <p class="price">13.980.000 VND</p>
+                        </a>
                     </div>
                     <div class="product">
-                        <img src="./anh/GPU2.jpg" >                      
-                        <p>CARD MÀN HÌNH COLORFUL IGAME GEFORCE RTX 4070 SUPER ULTRA WHITE OC 12GB-V</p>
-                        <p class="price">18.990.000 VND</p>
+                        <a href="chitietsanpham.php?id=44">
+                        <img src="./anh/GIALAP1.jpg" >
+                        <h4>PC PC GIẢ LẬP</h4>
+                        <p>DUAL Xeon E5-2696 V4 | RTX 3060 12GB</p>
+                        <p class="price">28.680.000 VND</p>
+                        </a>
                     </div>
                     <div class="product">
-                        <img src="./anh/CPU2.jpg" >
-                        <P>CPU Intel Core Ultra 7 265KF</P>
-                        <p class="price">9.890.000 VND</p>
+                        <a href="chitietsanpham.php?id=45">
+                        <img src="./anh/GIALAP1.jpg" >
+                        <h4>PC GIẢ LẬP</h4>
+                        <P>DUAL Xeon E5-2696 V3 | RTX 3060 12GB</P>
+                        <p class="price">20.680.000 VND</p>
+                        </a>
                     </div>
-                </div>
+            </div>   
+        
     </section>
 </main>
 

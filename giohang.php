@@ -38,9 +38,6 @@ if (!empty($cart)) {
     </div>
 
     <!-- Menu -->
-    <nav class="nav-menu">
-        <button class="menu-btn" id="menu-btn">☰ Danh sách sản phẩm</button>        
-    </nav>
 
     <!-- Giỏ hàng và đăng nhập -->
     <div class="user-icons">
@@ -111,6 +108,61 @@ if (!empty($cart)) {
 
 
     </main>
+
+
+<footer class="footer">
+<div class="footer-container">
+    <!-- Cột 1: Giới thiệu -->
+    <div class="footer-column">
+    <h3>VỀ CHÚNG TÔI</h3>
+    <p>
+        PC Store chuyên cung cấp PC gaming, linh kiện máy tính, laptop, phụ kiện chính hãng
+        với giá tốt nhất. Cam kết hàng chất lượng – bảo hành tận tâm.
+    </p>
+    </div>
+
+    <!-- Cột 2: Liên kết nhanh -->
+    <div class="footer-column">
+    <h3>LIÊN KẾT NHANH</h3>
+    <ul>
+        <li><a href="#">Trang chủ</a></li>
+        <li><a href="#">PC Gaming</a></li>
+        <li><a href="#">Linh kiện</a></li>
+        <li><a href="#">Khuyến mãi</a></li>
+        <li><a href="#">Liên hệ</a></li>
+    </ul>
+    </div>
+
+    <!-- Cột 3: Hỗ trợ khách hàng -->
+    <div class="footer-column">
+    <h3>HỖ TRỢ KHÁCH HÀNG</h3>
+    <ul>
+        <li><a href="#">Chính sách bảo hành</a></li>
+        <li><a href="#">Chính sách đổi trả</a></li>
+        <li><a href="#">Chính sách giao hàng</a></li>
+        <li><a href="#">Hướng dẫn mua hàng</a></li>
+    </ul>
+    </div>
+
+    <!-- Cột 4: Liên hệ -->
+    <div class="footer-column">
+    <h3>LIÊN HỆ</h3>
+    <p>📍 123 Trần Hưng Đạo, TP.HCM</p>
+    <p>📞 0123 456 789</p>
+    <p>✉️ support@pcstore.vn</p>
+    <div class="social-icons">
+        <a href="#"><img src="./icons/facebook.svg" alt="Facebook"></a>
+        <a href="#"><img src="./icons/instagram.svg" alt="Instagram"></a>
+        <a href="#"><img src="./icons/youtube.svg" alt="YouTube"></a>
+    </div>
+    </div>
+</div>
+
+<div class="footer-bottom">
+    <p>© 2025 PC Store. All rights reserved.</p>
+</div>
+</footer>
+
 
 
 

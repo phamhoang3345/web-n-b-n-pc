@@ -78,3 +78,78 @@ table, th, td { border: 1px solid black; padding: 10px; }
 img { width: 120px; }
 .btn { padding: 6px 12px; background: red; color: #fff; border: none; cursor: pointer; }
 .checkout { padding: 10px 20px; background: #1480ec; color: white; border: none; cursor: pointer; }
+
+
+
+/* Footer */
+.footer {
+    background-color: #ffffff;
+    color: #050505;
+    padding: 50px 0 20px;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: auto;
+    gap: 30px;
+}
+
+.footer-column {
+    flex: 1 1 220px;
+    min-width: 200px;
+}
+
+.footer-column h3 {
+    color: #050505;
+    margin-bottom: 15px;
+    font-size: 18px;
+    border-left: 4px solid #00bfff;
+    padding-left: 10px;
+}
+
+.footer-column p {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 8px;
+}
+
+.footer-column ul li a {
+    color: #050505;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.footer-column ul li a:hover {
+    color: #00bfff;
+}
+
+.social-icons a img {
+    width: 24px;
+    margin-right: 10px;
+    transition: transform 0.3s;
+}
+
+.social-icons a:hover img {
+    transform: scale(1.1);
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    border-top: 1px solid #f7f7f7;
+    padding-top: 15px;
+    font-size: 14px;
+    color: #050505;
+}
