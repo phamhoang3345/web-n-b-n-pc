@@ -1,0 +1,133 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f6f6f6;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: 30px auto;
+    text-align: center;
+}
+
+.title {
+    margin-bottom: 20px;
+    font-size: 32px;
+    color: #3b0b0b;
+}
+
+/* Nút thêm */
+.add-btn {
+    display: inline-block;
+    background: #15bdf2;
+    color: white;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+}
+.add-btn:hover {
+    opacity: 0.8;
+}
+
+/* Tìm kiếm */
+.search-box {
+    margin-bottom: 20px;
+}
+
+.search-box input {
+    padding: 10px;
+    width: 250px;
+    border-radius: 4px;
+    border: 1px solid #bbb;
+}
+
+.search-btn {
+    padding: 10px 16px;
+    background: #6d1414;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+.search-btn:hover {
+    background: #531010;
+}
+
+.reset-btn {
+    padding: 10px 16px;
+    background: gray;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-left: 10px;
+}
+.reset-btn:hover {
+    opacity: 0.8;
+}
+
+/* Sắp xếp */
+.sort-box {
+    margin: 15px 0;
+    font-size: 18px;
+}
+
+.sort-link {
+    color: #6d1414;
+    font-weight: bold;
+    text-decoration: none;
+}
+.sort-link:hover {
+    text-decoration: underline;
+}
+
+/* Bảng */
+.styled-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th {
+    background: #d3cfcf;
+    padding: 12px;
+}
+
+td {
+    background: white;
+    padding: 12px;
+}
+
+tr:nth-child(even) td {
+    background: #f2f2f2;
+}
+
+table, th, td {
+    border: 1px solid #ccc;
+}
+
+/* Nút sửa */
+.edit-btn {
+    background: #00b5e2;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-right: 5px;
+}
+.edit-btn:hover {
+    opacity: 0.8;
+}
+
+/* Nút xóa */
+.delete-btn {
+    background: #ff3c3c;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+.delete-btn:hover {
+    opacity: 0.8;
+}

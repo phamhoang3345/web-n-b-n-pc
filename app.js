@@ -187,7 +187,7 @@ const products = {
 },
 
     41 : {
-    name: "PC WORKSTATION | Dual Xeon E5-2680 V4 | RTX 3060",
+    name: "PC GIẢ LẬP | Dual Xeon E5-2680 V4 | RTX 3060",
     price: "17.680.000đ",
     img: "./anh/GIALAP1.jpg",
     specs : [
@@ -206,7 +206,7 @@ const products = {
 },
 
     42 :{
-    name: "PC WORKSTATION | Dual Xeon E5-2696 V3 | GTX 1660 Super",
+    name: "PC GIẢ LẬP | Dual Xeon E5-2696 V3 | GTX 1660 Super",
     price: "17.680.000đ",
     img: "./anh/GIALAP1.jpg",
     specs : [
@@ -225,7 +225,7 @@ const products = {
 },
 
     43: {
-    name: "PC WORKSTATION | Dual Xeon E5-2680 V4 | GTX 1660 Super",
+    name: "PC GIẢ LẬP | Dual Xeon E5-2680 V4 | GTX 1660 Super",
     price: "13.980.000đ", 
     img: "./anh/GIALAP1.jpg", 
     specs: [
@@ -244,7 +244,7 @@ const products = {
 },
 
     44: {
-    name: "PC WORKSTATION | Dual Xeon E5-2696 V4 | RTX 3060",
+    name: "PC GIẢ LẬP | Dual Xeon E5-2696 V4 | RTX 3060",
     price: "28.680.000đ", 
     img: "./anh/GIALAP1.jpg", 
     specs: [
@@ -263,7 +263,7 @@ const products = {
 },
 
     45: {
-    name: "PC WORKSTATION | Dual Xeon E5-2696 V3 | RTX 3060",
+    name: "PC GIẢ LẬP | Dual Xeon E5-2696 V3 | RTX 3060",
     price: "20.680.000đ", 
     img: "./anh/GIALAP1.jpg", 
     specs: [
@@ -286,7 +286,7 @@ const products = {
   // Lấy id từ URL
     const params = new URLSearchParams(window.location.search);
     const id = parseInt(params.get("id"));
-    if (!id || !products[id]) {
+    if (!id || !products[id]) { 
     document.querySelector("main").innerHTML = "<p>Sản phẩm không tồn tại.</p>";
     return;
 }

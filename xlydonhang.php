@@ -15,7 +15,6 @@ $address  = $_POST["diachi"] ?? "";
 $province = $_POST["TP"] ?? "";
 $note     = $_POST["ghichu"] ?? "";
 $payment  = $_POST["ptthanhtoan"] ?? "";
-$product_name = $_POST["tensp"] ?? "";
 
 // Kiểm tra dữ liệu bắt buộc
 if (empty($fullname) || empty($phone) || empty($address) || empty($province)) {
@@ -23,11 +22,11 @@ if (empty($fullname) || empty($phone) || empty($address) || empty($province)) {
 }
 
 // Chuẩn bị câu lệnh SQL
-$sql = "INSERT INTO donhang (ten, sdt, email, diachi, TP, ghichu, ptthanhtoan, thoigiandat, tensp)
+$sql = "INSERT INTO donhang (ten, sdt, email, diachi, TP, ghichu, ptthanhtoan, thoigiandat, tongtien)
         VALUES (?, ?, ?, ?, ?, ?, ?, NOW(), ?)";
 
 $stmt = $cn->prepare($sql);
-$stmt->bind_param("ssssssss", $fullname, $phone, $email, $address, $province, $note, $payment, $product_name);
+$stmt->bind_param("ssssssss", $fullname, $phone, $email, $address, $province, $note, $payment, $total);
 
 
 if ($stmt->execute()) {
@@ -52,6 +51,34 @@ if ($stmt->execute()) {
 } else {
     echo "Lỗi khi tạo đơn hàng: " . $stmt->error;
 }
+
+// Lấy id đơn hàng vừa tạo
+$order_id = $cn->insert_id;
+
+    // Duyệt giỏ hàng
+    session_start();
+    if (!empty($_SESSION['cart'])) {
+
+        foreach ($_SESSION['cart'] as $item) {
+
+            $product_id = $item['id'];
+            $quantity   = $item['quantity'];
+            $price      = $item['price'];
+
+            $sql_ct = "INSERT INTO chitietdonhang (order_id, product_id, soluong, gia)
+                        VALUES (?, ?, ?, ?)";
+
+            $stmt_ct = $cn->prepare($sql_ct);
+            $stmt_ct->bind_param("iiid", $order_id, $product_id, $quantity, $price);
+            $stmt_ct->execute();
+        }
+    }
+
+    // Xóa giỏ hàng sau khi đặt
+    unset($_SESSION['cart']);
+
+
+
 
 $stmt->close();
 $cn->close();

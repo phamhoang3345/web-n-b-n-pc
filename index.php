@@ -42,7 +42,7 @@
 
         <a href="giohang.php"><img src="./anh/gio hang.png">Giỏ hàng</a>
 
-
+        <!-- lấy dữ liệu từ data username-->
         <?php if(isset($_SESSION['username'])): ?>
         <a href="taikhoan.php"><img src="./anh/gio hang.png">Xin chào, <?php echo $_SESSION['username']; ?></a>
 
@@ -63,13 +63,13 @@
 
             <div class = "section-header">
                 <h2>PC GAMING</h2> 
-                <a href="#" class="btn">Xem tất cả +</a>
             </div>
                 <div class="products">
 
                     
                     <div class="product">
-                        <a href="chitietsanpham.php?id= 1">
+                        <!-- gán từng sản phẩm 1 id -->
+                        <a href="chitietsanpham.php?id=1">
                         <img src = "./anh/PCGAMINGA.png" >
                         <h4>PC GAMING</h4>
                         <P>PC Gaming | RYZEN 9 9950X3D | RTX 5090 | 4K GAMING</P>
@@ -83,7 +83,7 @@
                         <img src="./anh/PCGAMINGA.png">
                         <h4>PC GAMING</h4>
                         <P>INTEL i9 14900K | RTX 4080 SUPER | 2K GAMING</P>
-                        <p class="price">120,000,000 VND</p>
+                        <p class="price">61,290,000 VND</p>
                         </a>
                     </div>
                     
@@ -102,7 +102,7 @@
                         <img src="./anh/PCGAMINGA1.png" >
                         <h4>PC GAMING</h4>
                         <p>RYZEN 7 7800X3D | RTX 4070TI | 1440P GAMING</p>
-                        <p class="price">45,000,000 VND</p>
+                        <p class="price">53,980,000 VND</p>
                         </a>
                     </div>
 
@@ -111,7 +111,7 @@
                         <img src="./anh/PCGAMINGB1.JPG" >
                         <h4>PC GAMING</h4>
                         <P>RYZEN 7 5700X | RTX 4060 | 1080P GAMING</P>
-                        <p class="price">45,000,000 VND</p>
+                        <p class="price">17,580,000 VND</p>
                         </a>
                     </div>
 
@@ -121,7 +121,6 @@
         <div class="product-section">
             <div class = "section-header">
                 <h2>PC WORKSTATION</h2> 
-                <a href="#" class="btn">Xem tất cả +</a>
             </div>
                 <div class="products">
                     <div class="product">
@@ -129,7 +128,7 @@
                         <img src="./anh/WORK1.jpg" >
                         <h4>PC WORKSTATION</h4>
                         <P>ULTRA 7 265KF | RTX 4070 12GB OC</P>
-                        <p class="price">37,980,000 VND</p>
+                        <p class="price">38,980,000 VND</p>
                         </a>
                     </div>
                     <div class="product">
@@ -171,7 +170,6 @@
         <div class="product-section">
             <div class = "section-header">
                 <h2>PC GIẢ LẬP</h2> 
-                <a href="#" class="btn">Xem tất cả +</a>
             </div>
                 <div class="products">
                     <div class="product">

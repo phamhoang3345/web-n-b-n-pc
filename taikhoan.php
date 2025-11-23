@@ -74,7 +74,6 @@ $user = $result->fetch_assoc();
         <label for="password">Mật khẩu</label>
         <input type="password" id="password" value="<?php echo $user['password']; ?>">
         
-        <button>Thay đổi thông tin</button>
     </div>
         <div class="orders">
             <h3>Đơn hàng gần đây</h3>

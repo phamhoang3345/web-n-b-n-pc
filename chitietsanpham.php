@@ -1,12 +1,14 @@
 <?php session_start(); 
 include 'sanpham.php';
+
 $id = isset($_GET['id']) ? intval($_GET['id']) : 0;
 
-if ($id && isset($products[$id])) {
-    $product = $products[$id];
+
+if (!isset($products[$id])) {
+    die("Sản phẩm không tồn tại!");
 }
 
-$product_name = $_POST["tensp"] ?? "";
+$product = $products[$id];
 ?>
 
 <!DOCTYPE html>
@@ -14,7 +16,7 @@ $product_name = $_POST["tensp"] ?? "";
 <head>
 <meta charset="UTF-8">
 <title>PC Gaming RGB - Thông số kỹ thuật</title>
-<link rel="stylesheet" href="pc1.css">
+<link rel="stylesheet" href="chitietsanpham.css">
 </head>
 
 
@@ -70,20 +72,12 @@ $product_name = $_POST["tensp"] ?? "";
         <!-- JS sẽ chèn danh sách specs -->
       </ul>
 
-
       <div class = "btncardbuy">
-      <form action="cart.php" method="POST"class="btn-form">
-        <input type="hidden" name="id" value="<?php echo (int)$id; ?>" >
-        <button type="submit" class="add-cart">Thêm giỏ hàng</button>
+      <form action="additems.php" method="POST"class="btn-form">
+        <input type="hidden" name="id" value="<?php echo $id; ?>">
+        <button type="submit" class="add-cart">Thêm vào giỏ hàng</button>
       </form>
 
-        <form action="dathang.php" method="post">
-            <input type="hidden" name="tensp" value=" <?php echo htmlspecialchars($product['name']); ?>  ">
-            <button type="submit" class="buy-now">Đặt hàng</button>
-        </form>
-
-
-      
       </div>
       </div>
     </div>
@@ -111,43 +105,7 @@ $product_name = $_POST["tensp"] ?? "";
     </div>
   </div>
 
-    <div class="product-section">
-            <div class = "section-header">
-                <h2>Sản phẩm liên quan</h2> 
-            </div>
-                <div class="products">
-                    <div class="product">
-                        <img src="/anh/WORK1.jpg" >
-                        <h4>PC WORKSTATION</h4>
-                        <P>ULTRA 7 265KF | RTX 4070 12GB OC</P>
-                        <p class="price">37,980,000 VND</p>
-                    </div>
-                    <div class="product">
-                        <img src="/anh/WORK2.jpg" >
-                        <h4>PC WORKSTATION</h4>
-                        <P>i7 14700F | RTX 4060 8GB </P>
-                        <p class="price">25,980,000 VND</p>
-                    </div>
-                    <div class="product">
-                        <img src="WORK3.JPG" >
-                        <h4>PC WORKSTATION</h4>
-                        <P>I9 14900KF | RTX 5070 12GB</P>
-                        <p class="price">44,680,000 VND</p>
-                    </div>
-                    <div class="product">
-                        <img src="WORK2.jpg" >
-                        <h4>PC WORKSTATION</h4>
-                        <p>I5 14600KF | RTX 3060 12GB</p>
-                        <p class="price">20,980,000 VND</p>
-                    </div>
-                    <div class="product">
-                        <img src="WORK3.JPG" >
-                        <h4>PC WORKSTATION</h4>
-                        <P>Ryzen 9 9900X | RTX 5090 32GB</P>
-                        <p class="price">45,000,000 VND</p>
-                    </div>
-            </div>         
-    </div>
+    
 </main>
 
 

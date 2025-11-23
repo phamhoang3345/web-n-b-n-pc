@@ -1,10 +1,3 @@
-<?php
-$product_name = $_POST['tensp'] ?? '';
-$cart = $_SESSION['cart'] ?? [];
-?>
-
-
-
 <!DOCTYPE html>
 <html lang="vi">
 <head>
@@ -14,16 +7,9 @@ $cart = $_SESSION['cart'] ?? [];
     <link rel="stylesheet" href="dathang.css">
 </head>
 <body>
-
+<form action="xlydonhang.php" method="POST">
 <div class="order-container">
-    <h2>Thông tin đặt hàng</h2>
-
-    <form action="xlydonhang.php" method="POST">
-        <input type="hidden" name="tensp" value="<?php echo htmlspecialchars($product_name); ?>">
-
-
-
-
+        <h2>Thông tin đặt hàng</h2>
 
         <label>Họ và tên *</label>
         <input type="text" name="ten" required>
@@ -51,11 +37,10 @@ $cart = $_SESSION['cart'] ?? [];
         <h3>Phương thức thanh toán</h3>
         <div class="ptthanhtoan">
             <label><input type="radio" name="ptthanhtoan" value="cod" checked> Thanh toán khi nhận hàng (COD)</label>
-            <label><input type="radio" name="ptthanhtoan" value="bank"> Chuyển khoản ngân hàng</label>
         </div>
 
-        <button type="submit" class="btn-order">Xác nhận đặt hàng</button>
-    </form>
+            <button type="submit" class="btn-order">Xác nhận đặt hàng</button>
+</form>
 </div>
 
 </body>

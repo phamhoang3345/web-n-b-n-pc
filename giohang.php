@@ -1,6 +1,8 @@
 <?php
 session_start();
 
+include "sanpham.php";
+
 // Nếu giỏ hàng chưa có thì tạo mảng rỗng
 $cart = isset($_SESSION['cart']) ? $_SESSION['cart'] : [];
 
@@ -8,11 +10,10 @@ $cart = isset($_SESSION['cart']) ? $_SESSION['cart'] : [];
 $total = 0;
 if (!empty($cart)) {
     foreach ($cart as $item) {
-        if (!empty($item['price'])) {
-            $total += $item['price'];
+             $total += $item['price'] * $item['quantity'];
         }
     }
-}
+
 ?>
 <!DOCTYPE html>
 <html lang="vi">
@@ -65,8 +66,6 @@ if (!empty($cart)) {
 
 
 <main>
-
-
 <h2 style="text-align:center;">Giỏ hàng của bạn</h2>
 
 <?php if (empty($cart)): ?>
@@ -77,23 +76,32 @@ if (!empty($cart)) {
         <th>Ảnh</th>
         <th>Tên sản phẩm</th>
         <th>Giá</th>
+        <th>Số lượng</th>
+        <th>Tổng</th>
         <th>Xóa</th>
     </tr>
 
-    <?php foreach ($cart as $index => $item): ?>
-    <tr>
-        <td><img src="<?php echo $item['img']; ?>"></td>
-        <td><?php echo $item['name']; ?></td>
-        <td><?php echo number_format($item['price']); ?> đ</td>
-        <td>
-            <form action="xoahang.php" method="POST">
-                <input type="hidden" name="index" value="<?php echo $index; ?>">
-                <button class="btn" type="submit">Xóa</button>
-            </form>
-        </td>
-    </tr>
+    <?php foreach ($_SESSION['cart'] as $index => $item): ?>
+        <tr>
+            <td><img src="<?= $item['img'] ?>" width="80"></td>
+            <td><?= $item['name'] ?></td>
+            <td><?= number_format($item['price']) ?>đ</td>
+
+            <td>
+                <a href="update.php?index=<?= $index ?>&action=minus">-</a>
+                <?= $item['quantity'] ?>
+                <a href="update.php?index=<?= $index ?>&action=plus">+</a>
+            </td>
+
+            <td><?= number_format($item['price'] * $item['quantity']) ?>đ</td>
+
+            <td>
+                <a href="xoahang.php?index=<?= $index ?>">Xóa</a>
+            </td>
+        </tr>
     <?php endforeach; ?>
 </table>
+
 
 <h3 style="text-align:center; margin-top:20px;">
     Tổng tiền: <?php echo number_format($total); ?> đ

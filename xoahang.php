@@ -1,15 +1,12 @@
 <?php
 session_start();
 
-if (isset($_POST['index'])) {
-    $index = $_POST['index'];
+$index = intval($_GET['index']);
 
-    // Xóa sản phẩm theo index
+if (isset($_SESSION['cart'][$index])) {
     unset($_SESSION['cart'][$index]);
-
-    // Sắp xếp lại index từ 0
-    $_SESSION['cart'] = array_values($_SESSION['cart']);
 }
 
 header("Location: giohang.php");
 exit;
+?>
