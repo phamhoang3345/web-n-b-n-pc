@@ -1,0 +1,199 @@
+/*header*/
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #ededed;
+}
+
+.header {
+    background-color: #1480ec; /* Màu xanh công nghệ */
+    padding: 10px 0;
+    color: rgb(253, 253, 253);
+    position: sticky;
+    top: 0;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    background: white;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.search-box input {
+    border: none;
+    padding: 8px 10px;
+    width: 250px;
+    outline: none;
+}
+
+.search-box button {
+    background-color: #1480ec;
+    border: none;
+    color: white;
+    padding: 8px 15px;
+    cursor: pointer;
+}
+
+.user-icons a {
+    color: #eceaea;
+    text-decoration: none;
+}
+
+.user-icons img {
+    width: 25px;
+    margin-left: 15px;
+    filter: brightness(0) invert(1);
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.user-icons img:hover {
+    transform: scale(1.1);
+}
+
+
+
+
+
+/* main */
+table { width: 80%; 
+    margin: auto; 
+    border-collapse: collapse; 
+}
+
+
+table, th, td { 
+    border: 
+    1px solid black; 
+    padding: 10px; 
+}
+
+
+img { width: 120px; 
+}
+
+
+.buy-now { 
+    padding: 12px 24px;
+    background: linear-gradient(135deg, #ff3d3d, #ff1a1a);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(255, 0, 0, 0.3);
+    transition: 0.3s ease;
+}
+
+/* Hiệu ứng hover */
+.buy-now:hover {
+    background: linear-gradient(135deg, #ff5d5d, #ff2e2e);
+    box-shadow: 0 6px 15px rgba(255, 50, 50, 0.4);
+    transform: translateY(-3px);
+}
+
+/* Hiệu ứng khi nhấn */
+.buy-now:active {
+    transform: scale(0.97);
+}
+
+
+.checkout { padding: 10px 20px; 
+    background: #1480ec; 
+    color: white; 
+    border: none; 
+    cursor: pointer; 
+}
+
+
+
+/* Footer */
+.footer {
+    background-color: #ffffff;
+    color: #050505;
+    padding: 50px 0 20px;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: auto;
+    gap: 30px;
+}
+
+.footer-column {
+    flex: 1 1 220px;
+    min-width: 200px;
+}
+
+.footer-column h3 {
+    color: #050505;
+    margin-bottom: 15px;
+    font-size: 18px;
+    border-left: 4px solid #00bfff;
+    padding-left: 10px;
+}
+
+.footer-column p {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 8px;
+}
+
+.footer-column ul li a {
+    color: #050505;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.footer-column ul li a:hover {
+    color: #00bfff;
+}
+
+.social-icons a img {
+    width: 24px;
+    margin-right: 10px;
+    transition: transform 0.3s;
+}
+
+.social-icons a:hover img {
+    transform: scale(1.1);
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    border-top: 1px solid #f7f7f7;
+    padding-top: 15px;
+    font-size: 14px;
+    color: #050505;
+}
